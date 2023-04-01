@@ -1,3 +1,5 @@
 # Identity and Access Management scripts
 
-- List users
+- [create_user.rb](create_user.rb) - Create a user in the tenancy with name, descritpion and e-mail address
+- list_users.rb - List all users in the tenancy
+- list_users_compartment.rb - List all users in a given comparment (compartment_id required)
