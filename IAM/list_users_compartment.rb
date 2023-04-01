@@ -15,7 +15,7 @@ require 'oci'
 
 compartment_id = ARGV[0]
 
-api = OCI::Identity::IdentityClient.new(region: OCI::Regions::REGION_EU_FRANKFURT_1)
+identity_client = OCI::Identity::IdentityClient.new(region: OCI::Regions::REGION_EU_FRANKFURT_1)
 # get compartment id from user input
-response = api.list_users(compartment_id)
+response = identity_client.list_users(compartment_id)
 response.data.each { |user| puts user.name }
