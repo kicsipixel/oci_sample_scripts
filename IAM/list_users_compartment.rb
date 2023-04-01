@@ -6,16 +6,16 @@
 # This will use credentials and settings from the DEFAULT profile at ~/.oci/config (on Windows "C:\Users\{user}\.oci\config").
 #
 # Format:
-#   list.user.rb compartment_id
+#   list.user_rb compartment_id
 #
 # Example run:
-#   ruby list.user.rb ocid1.compartment.oc1..aaaaaaaachbptfsq3er27xguzvnc27l2cthlhc2ru2p4jcafdm4zuzdmgw2q
+#   ruby list_user.rb ocid1.compartment.oc1..aaaaaaaachbptfsq3er27xguzvnc27l2cthlhc2ru2p4jcafdm4zuzdmgw2q
 
 require 'oci'
 
 compartment_id = ARGV[0]
 
 identity_client = OCI::Identity::IdentityClient.new(region: OCI::Regions::REGION_EU_FRANKFURT_1)
-# get compartment id from user input
+# Get compartment id from user input
 response = identity_client.list_users(compartment_id)
 response.data.each { |user| puts user.name }

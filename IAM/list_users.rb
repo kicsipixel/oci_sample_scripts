@@ -6,14 +6,14 @@
 # This will use credentials and settings from the DEFAULT profile at ~/.oci/config (on Windows "C:\Users\{user}\.oci\config").
 #
 # Format:
-#   list.user.rb
+#   list_user.rb
 #
 # Example run:
-#   ruby list.user.rb
+#   ruby list_user.rb
 
 require 'oci'
 
 identity_client = OCI::Identity::IdentityClient.new(region: OCI::Regions::REGION_EU_FRANKFURT_1)
-# get tenancy id from your config file
+# Get tenancy id from your config file
 response = identity_client.list_users(OCI.config.tenancy)
 response.data.each { |user| puts user.name }
