@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-# This script demonstrates how to create a user in a given compartment 
+# This script demonstrates how to create a user in the tenancy 
 # Created by Szabolcs Toth, 01-04-2023
 #
 # This will use credentials and settings from the DEFAULT profile at ~/.oci/config (on Windows "C:\Users\{user}\.oci\config").

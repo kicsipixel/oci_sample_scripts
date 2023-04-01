@@ -6,10 +6,10 @@
 # This will use credentials and settings from the DEFAULT profile at ~/.oci/config (on Windows "C:\Users\{user}\.oci\config").
 #
 # Format:
-#   list_user.rb
+#   list_users.rb
 #
 # Example run:
-#   ruby list_user.rb
+#   ruby list_users.rb
 
 require 'oci'
 

@@ -6,10 +6,10 @@
 # This will use credentials and settings from the DEFAULT profile at ~/.oci/config (on Windows "C:\Users\{user}\.oci\config").
 #
 # Format:
-#   list.user_rb compartment_id
+#   list_users_compartment.rb compartment_id
 #
 # Example run:
-#   ruby list_user.rb ocid1.compartment.oc1..aaaaaaaachbptfsq3er27xguzvnc27l2cthlhc2ru2p4jcafdm4zuzdmgw2q
+#   ruby list_users_compartment.rb ocid1.compartment.oc1..aaaaaaaachbptfsq3er27xguzvnc27l2cthlhc2ru2p4jcafdm4zuzdmgw2q
 
 require 'oci'
 
