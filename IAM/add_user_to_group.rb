@@ -21,7 +21,7 @@ identity_client = OCI::Identity::IdentityClient.new(region: OCI::Regions::REGION
 add_user_to_group_response =
   identity_client.add_user_to_group(
     OCI::Identity::Models::AddUserToGroupDetails.new(
-      user_id: user_id,
+      user_id:,
       group_id: groud_id
     )
   )

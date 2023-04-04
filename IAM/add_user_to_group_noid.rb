@@ -23,23 +23,23 @@ selected_group = nil
 
 # Get the list of users
 response = identity_client.list_users(OCI.config.tenancy)
-response.data.each { |user| users_list.push(user)}
+response.data.each { |user| users_list.push(user) }
 
 # Get the list of groups
 response = identity_client.list_groups(OCI.config.tenancy)
-response.data.each { |group| groups_list.push(group)}
+response.data.each { |group| groups_list.push(group) }
 
 # Show the list of users
 puts "\n*** USERS *** "
 users_list.each.with_index(1) do |option, index|
   puts "#{index}. #{option.name}"
 end
-puts "******"
+puts '******'
 
 loop do
-  print "Pick a user from the list > "
+  print 'Pick a user from the list > '
   choice = gets.to_i
-  selected_user= users_list[choice - 1]
+  selected_user = users_list[choice - 1]
   break if choice.between?(1, users_list.size)
 
   puts "Enter a value between 1 and #{users_list.size}"
@@ -50,10 +50,10 @@ puts "\n*** GROUPS *** "
 groups_list.each.with_index(1) do |option, index|
   puts "#{index}. #{option.name}"
 end
-puts "******"
+puts '******'
 
 loop do
-  print "Pick a group from the list > "
+  print 'Pick a group from the list > '
   choice = gets.to_i
   selected_group = groups_list[choice - 1]
   break if choice.between?(1, groups_list.size)

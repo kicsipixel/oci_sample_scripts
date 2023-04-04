@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-# This script demonstrates how to list all the users in your tenancy. 
+# This script demonstrates how to list all the users in your tenancy.
 # Created by Szabolcs Toth, 01-04-2023
 #
 # This will use credentials and settings from the DEFAULT profile at ~/.oci/config (on Windows "C:\Users\{user}\.oci\config").
