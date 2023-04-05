@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# frozen_string_literal: true
 
 # This script demonstrates how to create a group in the tenancy
 # Created by Szabolcs Toth, 01-04-2023
@@ -30,4 +31,4 @@ create_group_response =
   )
 
 # Get the data from response
-puts "#{create_group_response.data}"
+puts create_group_response.data.to_s

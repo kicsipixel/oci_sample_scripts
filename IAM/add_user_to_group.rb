@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# frozen_string_literal: true
 
 # This script demonstrates how to add a user to a group
 # Created by Szabolcs Toth, 01-04-2023
@@ -27,4 +28,4 @@ add_user_to_group_response =
   )
 
 # Get the data from response
-puts "#{add_user_to_group_response.data}"
+puts add_user_to_group_response.data.to_s

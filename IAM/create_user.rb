@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# frozen_string_literal: true
 
 # This script demonstrates how to create a user in the tenancy
 # Created by Szabolcs Toth, 01-04-2023
@@ -32,4 +33,4 @@ create_user_response =
   )
 
 # Get the data from response
-puts "#{create_user_response.data}"
+puts create_user_response.data.to_s

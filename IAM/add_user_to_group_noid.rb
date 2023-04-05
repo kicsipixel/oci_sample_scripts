@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# frozen_string_literal: true
 
 # This script demonstrates how to add a user to a group
 # Created by Szabolcs Toth, 01-04-2023
@@ -30,7 +31,7 @@ response = identity_client.list_groups(OCI.config.tenancy)
 response.data.each { |group| groups_list.push(group) }
 
 # Show the list of users
-puts "\n*** USERS *** "
+puts '\n*** USERS ***'
 users_list.each.with_index(1) do |option, index|
   puts "#{index}. #{option.name}"
 end
@@ -46,7 +47,7 @@ loop do
 end
 
 # Show the list of groups
-puts "\n*** GROUPS *** "
+puts '\n*** GROUPS ***'
 groups_list.each.with_index(1) do |option, index|
   puts "#{index}. #{option.name}"
 end

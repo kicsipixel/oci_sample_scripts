@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# frozen_string_literal: true
 
 # This script demonstrates how to list all the users in a given compartment
 # Created by Szabolcs Toth, 01-04-2023
