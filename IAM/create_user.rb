@@ -22,15 +22,7 @@ identity_client = OCI::Identity::IdentityClient.new(region: OCI::Regions::REGION
 # Get tetancy id automatically
 compartment_id = identity_client.get_compartment(OCI.config.tenancy).data.id
 
-create_user_response =
-  identity_client.create_user(
-    OCI::Identity::Models::CreateUserDetails.new(
-      compartment_id:,
-      name: user_name,
-      description: user_description,
-      email: user_email
-    )
-  )
+create_user_response = identity_client.create_user(OCI::Identity::Models::CreateUserDetails.new(compartment_id: compartment_id, name: user_name, description: user_description, email: user_email))
 
 # Get the data from response
 puts create_user_response.data.to_s

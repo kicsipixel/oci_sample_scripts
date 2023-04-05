@@ -64,13 +64,7 @@ end
 
 puts "\nAdding user: #{selected_user.name} to group: #{selected_group.name}..."
 
-add_user_to_group_response =
-  identity_client.add_user_to_group(
-    OCI::Identity::Models::AddUserToGroupDetails.new(
-      user_id: selected_user.id,
-      group_id: selected_group.id
-    )
-  )
+add_user_to_group_response = identity_client.add_user_to_group(OCI::Identity::Models::AddUserToGroupDetails.new(user_id: selected_user.id, group_id: selected_group.id))
 
 # Get the data from response
 puts "\n#{add_user_to_group_response.data}"

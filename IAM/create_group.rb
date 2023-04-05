@@ -21,14 +21,7 @@ identity_client = OCI::Identity::IdentityClient.new(region: OCI::Regions::REGION
 # Get tetancy id automatically
 compartment_id = identity_client.get_compartment(OCI.config.tenancy).data.id
 
-create_group_response =
-  identity_client.create_group(
-    OCI::Identity::Models::CreateGroupDetails.new(
-      compartment_id:,
-      name: group_name,
-      description: group_description
-    )
-  )
+create_group_response = identity_client.create_group(OCI::Identity::Models::CreateGroupDetails.new(compartment_id: compartment_id, name: group_name, description: group_description))
 
 # Get the data from response
 puts create_group_response.data.to_s

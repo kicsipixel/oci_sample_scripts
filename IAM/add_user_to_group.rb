@@ -19,13 +19,7 @@ groud_id = ARGV[1]
 
 identity_client = OCI::Identity::IdentityClient.new(region: OCI::Regions::REGION_EU_FRANKFURT_1)
 
-add_user_to_group_response =
-  identity_client.add_user_to_group(
-    OCI::Identity::Models::AddUserToGroupDetails.new(
-      user_id:,
-      group_id: groud_id
-    )
-  )
+add_user_to_group_response = identity_client.add_user_to_group(OCI::Identity::Models::AddUserToGroupDetails.new(user_id: user_id, group_id: groud_id))
 
 # Get the data from response
 puts add_user_to_group_response.data.to_s
